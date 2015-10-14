@@ -22,7 +22,7 @@ namespace Companion
         {
             listBoxIPs.Items.Clear();
 
-            //IP Adressing
+            //IP addressing
             IPHostEntry host;
             string localIP = "?";
             host = Dns.GetHostEntry(Dns.GetHostName());

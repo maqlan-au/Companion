@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Network_Tools));
             this.groupBoxCurrentSettings = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.labelHostname = new System.Windows.Forms.Label();
-            this.labelHostnameVal = new System.Windows.Forms.Label();
-            this.labelIPs = new System.Windows.Forms.Label();
             this.listBoxIPs = new System.Windows.Forms.ListBox();
+            this.labelIPs = new System.Windows.Forms.Label();
+            this.labelHostnameVal = new System.Windows.Forms.Label();
+            this.labelHostname = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxConnectivity = new System.Windows.Forms.GroupBox();
-            this.groupBoxIPControl = new System.Windows.Forms.GroupBox();
-            this.groupBoxDNSControl = new System.Windows.Forms.GroupBox();
-            this.buttonIPConfig = new System.Windows.Forms.Button();
             this.buttonPingGoogle = new System.Windows.Forms.Button();
-            this.buttonDNStoDHCP = new System.Windows.Forms.Button();
+            this.buttonIPConfig = new System.Windows.Forms.Button();
+            this.groupBoxIPControl = new System.Windows.Forms.GroupBox();
             this.buttonIPtoDHCP = new System.Windows.Forms.Button();
-            this.buttonFlushDNS = new System.Windows.Forms.Button();
             this.buttonIPRenew = new System.Windows.Forms.Button();
+            this.groupBoxDNSControl = new System.Windows.Forms.GroupBox();
+            this.buttonDNStoDHCP = new System.Windows.Forms.Button();
+            this.buttonFlushDNS = new System.Windows.Forms.Button();
             this.groupBoxCurrentSettings.SuspendLayout();
             this.groupBoxConnectivity.SuspendLayout();
             this.groupBoxIPControl.SuspendLayout();
@@ -64,33 +64,15 @@
             this.groupBoxCurrentSettings.TabStop = false;
             this.groupBoxCurrentSettings.Text = "Current Settings";
             // 
-            // button1
+            // listBoxIPs
             // 
-            this.button1.Location = new System.Drawing.Point(197, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 86);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Get/Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // labelHostname
-            // 
-            this.labelHostname.AutoSize = true;
-            this.labelHostname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHostname.Location = new System.Drawing.Point(6, 34);
-            this.labelHostname.Name = "labelHostname";
-            this.labelHostname.Size = new System.Drawing.Size(67, 13);
-            this.labelHostname.TabIndex = 1;
-            this.labelHostname.Text = "Hostname:";
-            // 
-            // labelHostnameVal
-            // 
-            this.labelHostnameVal.AutoSize = true;
-            this.labelHostnameVal.Location = new System.Drawing.Point(79, 34);
-            this.labelHostnameVal.Name = "labelHostnameVal";
-            this.labelHostnameVal.Size = new System.Drawing.Size(0, 13);
-            this.labelHostnameVal.TabIndex = 2;
+            this.listBoxIPs.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.listBoxIPs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxIPs.FormattingEnabled = true;
+            this.listBoxIPs.Location = new System.Drawing.Point(98, 70);
+            this.listBoxIPs.Name = "listBoxIPs";
+            this.listBoxIPs.Size = new System.Drawing.Size(93, 39);
+            this.listBoxIPs.TabIndex = 4;
             // 
             // labelIPs
             // 
@@ -102,15 +84,33 @@
             this.labelIPs.TabIndex = 3;
             this.labelIPs.Text = "IP Address(s):";
             // 
-            // listBoxIPs
+            // labelHostnameVal
             // 
-            this.listBoxIPs.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.listBoxIPs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBoxIPs.FormattingEnabled = true;
-            this.listBoxIPs.Location = new System.Drawing.Point(98, 70);
-            this.listBoxIPs.Name = "listBoxIPs";
-            this.listBoxIPs.Size = new System.Drawing.Size(93, 39);
-            this.listBoxIPs.TabIndex = 4;
+            this.labelHostnameVal.AutoSize = true;
+            this.labelHostnameVal.Location = new System.Drawing.Point(79, 34);
+            this.labelHostnameVal.Name = "labelHostnameVal";
+            this.labelHostnameVal.Size = new System.Drawing.Size(0, 13);
+            this.labelHostnameVal.TabIndex = 2;
+            // 
+            // labelHostname
+            // 
+            this.labelHostname.AutoSize = true;
+            this.labelHostname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHostname.Location = new System.Drawing.Point(6, 34);
+            this.labelHostname.Name = "labelHostname";
+            this.labelHostname.Size = new System.Drawing.Size(67, 13);
+            this.labelHostname.TabIndex = 1;
+            this.labelHostname.Text = "Hostname:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 86);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Get/Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBoxConnectivity
             // 
@@ -123,6 +123,26 @@
             this.groupBoxConnectivity.TabStop = false;
             this.groupBoxConnectivity.Text = "Connectivity";
             // 
+            // buttonPingGoogle
+            // 
+            this.buttonPingGoogle.Location = new System.Drawing.Point(197, 19);
+            this.buttonPingGoogle.Name = "buttonPingGoogle";
+            this.buttonPingGoogle.Size = new System.Drawing.Size(165, 93);
+            this.buttonPingGoogle.TabIndex = 1;
+            this.buttonPingGoogle.Text = "Ping google.com";
+            this.buttonPingGoogle.UseVisualStyleBackColor = true;
+            this.buttonPingGoogle.Click += new System.EventHandler(this.buttonPingGoogle_Click);
+            // 
+            // buttonIPConfig
+            // 
+            this.buttonIPConfig.Location = new System.Drawing.Point(6, 19);
+            this.buttonIPConfig.Name = "buttonIPConfig";
+            this.buttonIPConfig.Size = new System.Drawing.Size(165, 93);
+            this.buttonIPConfig.TabIndex = 0;
+            this.buttonIPConfig.Text = "IP Config";
+            this.buttonIPConfig.UseVisualStyleBackColor = true;
+            this.buttonIPConfig.Click += new System.EventHandler(this.buttonIPConfig_Click);
+            // 
             // groupBoxIPControl
             // 
             this.groupBoxIPControl.Controls.Add(this.buttonIPtoDHCP);
@@ -133,6 +153,26 @@
             this.groupBoxIPControl.TabIndex = 2;
             this.groupBoxIPControl.TabStop = false;
             this.groupBoxIPControl.Text = "IP Control";
+            // 
+            // buttonIPtoDHCP
+            // 
+            this.buttonIPtoDHCP.Location = new System.Drawing.Point(197, 19);
+            this.buttonIPtoDHCP.Name = "buttonIPtoDHCP";
+            this.buttonIPtoDHCP.Size = new System.Drawing.Size(165, 93);
+            this.buttonIPtoDHCP.TabIndex = 3;
+            this.buttonIPtoDHCP.Text = "Set IP to DHCP";
+            this.buttonIPtoDHCP.UseVisualStyleBackColor = true;
+            this.buttonIPtoDHCP.Click += new System.EventHandler(this.buttonIPtoDHCP_Click);
+            // 
+            // buttonIPRenew
+            // 
+            this.buttonIPRenew.Location = new System.Drawing.Point(6, 19);
+            this.buttonIPRenew.Name = "buttonIPRenew";
+            this.buttonIPRenew.Size = new System.Drawing.Size(165, 93);
+            this.buttonIPRenew.TabIndex = 5;
+            this.buttonIPRenew.Text = "Renew IP";
+            this.buttonIPRenew.UseVisualStyleBackColor = true;
+            this.buttonIPRenew.Click += new System.EventHandler(this.buttonIPRenew_Click);
             // 
             // groupBoxDNSControl
             // 
@@ -145,26 +185,6 @@
             this.groupBoxDNSControl.TabStop = false;
             this.groupBoxDNSControl.Text = "DNS Control";
             // 
-            // buttonIPConfig
-            // 
-            this.buttonIPConfig.Location = new System.Drawing.Point(6, 19);
-            this.buttonIPConfig.Name = "buttonIPConfig";
-            this.buttonIPConfig.Size = new System.Drawing.Size(165, 93);
-            this.buttonIPConfig.TabIndex = 0;
-            this.buttonIPConfig.Text = "IP Config";
-            this.buttonIPConfig.UseVisualStyleBackColor = true;
-            this.buttonIPConfig.Click += new System.EventHandler(this.buttonIPConfig_Click);
-            // 
-            // buttonPingGoogle
-            // 
-            this.buttonPingGoogle.Location = new System.Drawing.Point(197, 19);
-            this.buttonPingGoogle.Name = "buttonPingGoogle";
-            this.buttonPingGoogle.Size = new System.Drawing.Size(165, 93);
-            this.buttonPingGoogle.TabIndex = 1;
-            this.buttonPingGoogle.Text = "Ping google.com";
-            this.buttonPingGoogle.UseVisualStyleBackColor = true;
-            this.buttonPingGoogle.Click += new System.EventHandler(this.buttonPingGoogle_Click);
-            // 
             // buttonDNStoDHCP
             // 
             this.buttonDNStoDHCP.Location = new System.Drawing.Point(197, 19);
@@ -174,16 +194,6 @@
             this.buttonDNStoDHCP.Text = "DNS to DHCP";
             this.buttonDNStoDHCP.UseVisualStyleBackColor = true;
             this.buttonDNStoDHCP.Click += new System.EventHandler(this.buttonDNStoDHCP_Click);
-            // 
-            // buttonIPtoDHCP
-            // 
-            this.buttonIPtoDHCP.Location = new System.Drawing.Point(197, 19);
-            this.buttonIPtoDHCP.Name = "buttonIPtoDHCP";
-            this.buttonIPtoDHCP.Size = new System.Drawing.Size(165, 93);
-            this.buttonIPtoDHCP.TabIndex = 3;
-            this.buttonIPtoDHCP.Text = "Set IP to DHCP";
-            this.buttonIPtoDHCP.UseVisualStyleBackColor = true;
-            this.buttonIPtoDHCP.Click += new System.EventHandler(this.buttonIPtoDHCP_Click);
             // 
             // buttonFlushDNS
             // 
@@ -195,20 +205,11 @@
             this.buttonFlushDNS.UseVisualStyleBackColor = true;
             this.buttonFlushDNS.Click += new System.EventHandler(this.buttonFlushDNS_Click);
             // 
-            // buttonIPRenew
-            // 
-            this.buttonIPRenew.Location = new System.Drawing.Point(6, 19);
-            this.buttonIPRenew.Name = "buttonIPRenew";
-            this.buttonIPRenew.Size = new System.Drawing.Size(165, 93);
-            this.buttonIPRenew.TabIndex = 5;
-            this.buttonIPRenew.Text = "Renew IP";
-            this.buttonIPRenew.UseVisualStyleBackColor = true;
-            this.buttonIPRenew.Click += new System.EventHandler(this.buttonIPRenew_Click);
-            // 
             // Network_Tools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(397, 518);
             this.Controls.Add(this.groupBoxIPControl);
             this.Controls.Add(this.groupBoxDNSControl);
