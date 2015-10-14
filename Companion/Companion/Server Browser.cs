@@ -21,8 +21,8 @@ namespace Companion
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             //Change MySQL Connection Details Here
-            string connStr = "SERVER=localhost;" +
-                  "DATABASE=maqlan_servers;" +
+            string connStr = "SERVER=128.199.167.5;" +
+                  "DATABASE=companion_servers;" +
                   "UID=companion;" +
                   "PWD=companion;";
 
