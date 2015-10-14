@@ -6,8 +6,12 @@ Intended Functions
 To Do
  - Submit Feedback
  - Chat with other users
- - Host a game
+ - Submit a game server
+ - Collect DXDIAG Info
+ - Advertising
  - User Interface Design (Battlefront Inspired)
+ - Getting Started Info + Links
+ - Context Menus
 
 Done
  - Server Browser <DONE>
