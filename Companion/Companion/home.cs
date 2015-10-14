@@ -34,6 +34,8 @@ namespace Companion
 
         private void buttonTestSpeed_Click(object sender, EventArgs e)
         {
+            labelSpeedResult.Text = "Testing...";
+
             const string tempfile = "tempfile.tmp";
             System.Net.WebClient webClient = new System.Net.WebClient();
 
@@ -48,12 +50,6 @@ namespace Companion
             float speedMbps = speed / 1024;
 
             labelSpeedResult.Text = "Speed: " + speedMbps.ToString("N0") + " kbps";
-            //Console.WriteLine("Download duration: {0}", sw.Elapsed);
-            //Console.WriteLine("File size: {0}", fileInfo.Length.ToString("N0"));
-            //Console.WriteLine("Speed: {0} bps ", speed.ToString("N0"));
-
-            //Console.WriteLine("Press any key to continue...");
-            //Console.ReadLine();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

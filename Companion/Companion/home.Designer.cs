@@ -65,11 +65,11 @@ namespace Companion
             // labelSpeedResult
             // 
             this.labelSpeedResult.AutoSize = true;
-            this.labelSpeedResult.Location = new System.Drawing.Point(416, 145);
+            this.labelSpeedResult.Location = new System.Drawing.Point(406, 145);
             this.labelSpeedResult.Name = "labelSpeedResult";
-            this.labelSpeedResult.Size = new System.Drawing.Size(91, 13);
+            this.labelSpeedResult.Size = new System.Drawing.Size(54, 13);
             this.labelSpeedResult.TabIndex = 2;
-            this.labelSpeedResult.Text = "No Current Result";
+            this.labelSpeedResult.Text = "No Result";
             // 
             // buttonTestSpeed
             // 
