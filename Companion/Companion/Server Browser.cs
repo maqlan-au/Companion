@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Companion
 {
-    public partial class Form1 : Form
+    public partial class Server_Browser : Form
     {
-        public Form1()
+        public Server_Browser()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
