@@ -35,7 +35,7 @@ namespace Companion
 
             try
             {
-                //Chage select query here for filling data into the table
+                //Change select query here for filling data into the table
                 string sql = "SELECT * FROM servers ORDER BY name ASC";
                 cmd = new MySqlCommand(sql, conn);
 
