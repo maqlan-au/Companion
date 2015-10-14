@@ -12,6 +12,7 @@ To Do
  - User Interface Design (Battlefront Inspired)
  - Getting Started Info + Links
  - Context Menus
+ - Self updating functionality
 
 Done
  - Server Browser <DONE>
