@@ -1,0 +1,2 @@
+# Companion
+MaqLAN Companion Application
