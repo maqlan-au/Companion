@@ -8,6 +8,11 @@ Companion (for MaqLAN) is a application designed to make the life of the attende
 
 It also gives the operators of the event some inights into the scope of hardware on the network by anonmyouslty collecting internet speeds recorded by each client and providing processor, GPU and ram info.
 
+### Download
+The latest Version of Companion is always avaliable at:
+
+####http://companion.maqlan.com/download/latest/
+
 ### Intended Functions
 More and more ill be added over time. Please feel free to suggest addition through github or emailing at companion<at>maqlan<dot>com
 
