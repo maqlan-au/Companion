@@ -17,7 +17,7 @@ The latest Version of Companion is always avaliable at:
 More and more ill be added over time. Please feel free to suggest addition through github or emailing at companion<at>maqlan<dot>com
 
  - Submit Feedback + Time limiter (http://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/)
- - Chat with other users (https://conversejs.org/)
+ - Chat with other users (https://conversejs.org/ and http://awesomium.codeplex.com/)
  - Submit a game server (http://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/)
  - Collect System Info (http://www.codeproject.com/Articles/17973/How-To-Get-Hardware-Information-CPU-ID-MainBoard-I)
  - Advertising
