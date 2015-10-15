@@ -14,7 +14,7 @@ The latest Version of Companion is always avaliable at:
 ####http://companion.maqlan.com/download/latest/
 
 ### Intended Functions
-More and more ill be added over time. Please feel free to suggest addition through github or emailing at companion<at>maqlan<dot>com
+More and more ill be added over time. Please feel free to suggest addition through github or emailing at companion@maqlan.com
 
  - Submit Feedback + Time limiter (http://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/)
  - Chat with other users (https://conversejs.org/ and http://awesomium.codeplex.com/)
