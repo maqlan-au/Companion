@@ -1,6 +1,5 @@
 # Companion
--- Overview --
-
+### Overview
 Compantion (for MaqLAN) is a application designed to make the life of the attendee more straight forward at MaqLAN LAN Party events by solving some of the more common problems encountered. These problems focus around the following:
  - Lack of timetable information
  - Network/DNS connectivity problems
@@ -9,7 +8,7 @@ Compantion (for MaqLAN) is a application designed to make the life of the attend
 
 It also gives the operators of the event some inights into the scope of hardware on the network by anonmyouslty collecting internet speeds recorded by each client and providing processor, GPU and ram info.
 
--- Intended Functions --
+### Intended Functions --
 
 To Do
  - Submit Feedback + Time limiter (http://www.c-sharpcorner.com/UploadFile/9582c9/insert-update-delete-display-data-in-mysql-using-C-Sharp/)
@@ -22,7 +21,9 @@ To Do
  - Context Menus
  - Self updating functionality (http://wyday.com/wybuild/help/automatic-updates/)
 
-Done
+### Completed Functions
+Please note that these will be revisited throught the lifecycle of the application
+
  - Server Browser
  - Time
  - Internet Speed
