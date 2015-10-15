@@ -1,5 +1,6 @@
 # Companion
 -- Overview --
+
 Compantion (for MaqLAN) is a application designed to make the life of the attendee more straight forward at MaqLAN LAN Party events by solving some of the more common problems encountered. These problems focus around the following:
  - Lack of timetable information
  - Network/DNS connectivity problems
