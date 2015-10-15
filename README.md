@@ -20,6 +20,8 @@ More and more ill be added over time. Please feel free to suggest addition throu
  - Getting Started Info + Links
  - Context Menus
  - Self updating functionality (http://wyday.com/wybuild/help/automatic-updates/)
+ - Web stastictics for collected system info (https://developers.google.com/chart/?csw=1)
+ - Web database for feedback submitted + Web form for this
 
 ### Completed Functions
 Please note that these will be revisited throught the lifecycle of the application
@@ -36,3 +38,4 @@ Please note that these will be revisited throught the lifecycle of the applicati
  - IP to DHCP
  - DNS to DHCP
  - Hostname
+ - XMPP Server (companion.maqlan.com)
