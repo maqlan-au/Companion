@@ -29,6 +29,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
+        <ProgressBar x:Name="progressbarSpeedTest" HorizontalAlignment="Left" Height="22" Margin="328,702,0,0" VerticalAlignment="Top" Width="116"/>
 
     </Grid>
 </Window>

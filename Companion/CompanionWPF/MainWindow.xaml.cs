@@ -4,6 +4,11 @@ using System.Windows;
 using System.Windows.Threading;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.ComponentModel;
+using System.Net;
+using System.Windows.Controls;
+using System.Diagnostics;
+using System.Linq;
 
 namespace CompanionWPF
 {
@@ -28,32 +33,36 @@ namespace CompanionWPF
 
         private void buttonSpeedTest_Click(object sender, RoutedEventArgs e)
         {
-            labelSpeedTestVal.Content = "Testing...";
-
-            speedtesting = true;
+            //speedtesting = true;
             const string tempfile = "tempfile.tmp";
             System.Net.WebClient webClient = new System.Net.WebClient();
 
-            Console.WriteLine("Downloading file....");
+            webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+            webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
 
-            System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
-            webClient.DownloadFile("http://mirror.internode.on.net/pub/test/10meg.test", tempfile);
-            sw.Stop();
+            //System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
+            
+            webClient.DownloadFileAsync(new Uri("http://mirror.internode.on.net/pub/test/10meg.test"), tempfile);
+            
+            //sw.Stop();
 
-            FileInfo fileInfo = new FileInfo(tempfile);
-            long speed = fileInfo.Length / sw.Elapsed.Seconds;
-            float speedMbps = speed / 1024;
+            //FileInfo fileInfo = new FileInfo(tempfile);
+            //long speed = fileInfo.Length / sw.Elapsed.Seconds;
+            //float speedMbps = speed / 1024;
 
-            labelSpeedTestVal.Content = "Speed: " + speedMbps.ToString("N0") + " kbps";
-            speedtesting = false;
+            //labelSpeedTestVal.Content = "Speed: " + speedMbps.ToString("N0") + " kbps";
+            
+
         }
 
-        private void speedtesting_notification()
+        private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            while (speedtesting == true)
-            {
-                MessageBox.Show("Testing internet speed on 10mb. Please wait.");
-            }
+            progressbarSpeedTest.Value = e.ProgressPercentage;
+        }
+
+        private void Completed(object sender, AsyncCompletedEventArgs e)
+        {
+            //MessageBox.Show("Download completed!");
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

@@ -1,0 +1,13 @@
+﻿<Window x:Class="CompanionWPF.LoadingBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CompanionWPF"
+        mc:Ignorable="d"
+        Title="SpeedTesting..." Height="89.076" Width="431.092">
+    <Grid>
+        <ProgressBar Minimum="0" Maximum="100" Value="75" Margin="13,26,10,10"  />
+        <Label x:Name="label" Content="Downloading 10MB file. Please wait..." Margin="110,0,107,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
