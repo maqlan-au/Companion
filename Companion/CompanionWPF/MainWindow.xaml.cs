@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace CompanionWPF
 {
@@ -29,7 +19,6 @@ namespace CompanionWPF
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
-
         }
 
         void timer_Tick(object sender, EventArgs e)
@@ -41,6 +30,7 @@ namespace CompanionWPF
         {
             labelSpeedTestVal.Content = "Testing...";
 
+            speedtesting = true;
             const string tempfile = "tempfile.tmp";
             System.Net.WebClient webClient = new System.Net.WebClient();
 
@@ -55,6 +45,49 @@ namespace CompanionWPF
             float speedMbps = speed / 1024;
 
             labelSpeedTestVal.Content = "Speed: " + speedMbps.ToString("N0") + " kbps";
+            speedtesting = false;
+        }
+
+        private void speedtesting_notification()
+        {
+            while (speedtesting == true)
+            {
+                MessageBox.Show("Testing internet speed on 10mb. Please wait.");
+            }
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            labelLastUpdatedVal.Content = DateTime.Now.ToLongTimeString();
+
+            //Change MySQL Connection Details Here
+            string connStr = "SERVER=128.199.167.5;" +
+                "DATABASE=companion_servers;" +
+                "UID=companion;" +
+                "PWD=companion;";
+
+            MySqlConnection conn = new MySqlConnection(connStr);
+
+            DataTable dt = new DataTable();
+
+            conn.Open();
+
+            try
+            {
+                string query = "SELECT * FROM servers ORDER BY name ASC";
+                using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
+                    da.Fill(dt);
+
+                dataServerGrid.ItemsSource = dt.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn != null) conn.Close();
+            }
         }
     }
 }
