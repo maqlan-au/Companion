@@ -37,33 +37,26 @@ namespace CompanionWPF
             const string tempfile = "tempfile.tmp";
             System.Net.WebClient webClient = new System.Net.WebClient();
 
-            webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-            webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+            //webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+            //webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+            //WebClient.DownloadProgressChanged += (sender, e) => progressChanged(e.BytesReceived);
 
-            //System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
-            
-            webClient.DownloadFileAsync(new Uri("http://mirror.internode.on.net/pub/test/10meg.test"), tempfile);
-            
+            System.Diagnostics.Stopwatch sw = System.Diagnostics.Stopwatch.StartNew();
+
+            //webClient.DownloadFileAsync(new Uri("http://mirror.internode.on.net/pub/test/10meg.test"), tempfile);
+            webClient.DownloadFile("http://mirror.internode.on.net/pub/test/10meg.test", tempfile);
+
             //sw.Stop();
 
-            //FileInfo fileInfo = new FileInfo(tempfile);
-            //long speed = fileInfo.Length / sw.Elapsed.Seconds;
-            //float speedMbps = speed / 1024;
+            FileInfo fileInfo = new FileInfo(tempfile);
+            long speed = fileInfo.Length / sw.Elapsed.Seconds;
+            float speedMbps = speed / 1024;
 
-            //labelSpeedTestVal.Content = "Speed: " + speedMbps.ToString("N0") + " kbps";
-            
+            labelSpeedTestVal.Content = "Speed: " + speedMbps.ToString("N0") + " kbps";
 
-        }
 
-        private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            progressbarSpeedTest.Value = e.ProgressPercentage;
-        }
+    }
 
-        private void Completed(object sender, AsyncCompletedEventArgs e)
-        {
-            //MessageBox.Show("Download completed!");
-        }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
