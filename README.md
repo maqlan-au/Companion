@@ -27,6 +27,9 @@ More and more ill be added over time. Please feel free to suggest addition throu
  - Self updating functionality (http://wyday.com/wybuild/help/automatic-updates/)
  - Web stastictics for collected system info (https://developers.google.com/chart/?csw=1)
  - Web database for feedback submitted + Web form for this
+ - Teamspeak Install Check (http://stackoverflow.com/questions/16379143/check-if-application-is-installed-in-registry)
+ - Teamspeak instructions with URI (http://forum.teamspeak.com/showthread.php/38947-Problem-with-URI)
+ - Track game process time (http://www.codeproject.com/Articles/12138/Process-Information-and-Notifications-using-WMI)
 
 ### Completed Functions
 Please note that these will be revisited throught the lifecycle of the application
